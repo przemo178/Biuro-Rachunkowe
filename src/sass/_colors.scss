@@ -41,3 +41,30 @@ $light-pink-gradient-solid: linear-gradient(
   rgb(213, 158, 156),
   rgb(89, 59, 90)
 );
+$pink-gradient: linear-gradient(
+  45deg,
+  rgba(213, 158, 156, 0.75),
+  rgba(89, 59, 90, 0.75)
+);
+$dark-pink-gradient: linear-gradient(
+  45deg,
+  rgba(145, 51, 127, 0.75),
+  rgba(40, 24, 86, 0.75)
+);
+$dark-pink-gradient-solid: linear-gradient(
+  45deg,
+  rgb(145, 51, 127),
+  rgb(40, 24, 86)
+);
+$pink-secondary-gradient-solid: linear-gradient(
+  -20deg,
+  #ddd6f3 0%,
+  #faaca8 100%,
+  #faaca8 100%
+);
+$pink-third-gradient-solid: linear-gradient(
+  -225deg,
+  #ff057c 0%,
+  #8d0b93 50%,
+  #321575 100%
+);

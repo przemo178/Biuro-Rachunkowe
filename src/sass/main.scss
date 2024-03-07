@@ -117,7 +117,7 @@ body {
     font-size: 2.8rem;
     color: $pure-white;
     text-decoration: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 
     &::before {
       position: absolute;
@@ -159,17 +159,18 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 2em;
-  height: 75vh;
+  height: 85vh;
   text-align: center;
   color: $pure-white;
   @include heroImages("../../dist/img/header_3_640.jpg");
   background-attachment: scroll;
+  overflow: hidden;
 
   &__heading {
     // font-family: "Dancing Script", cursive;
     padding: 0.2em 0;
     font-family: "Montserrat", cursive;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     font-weight: 700;
   }
 
@@ -200,10 +201,12 @@ body {
 }
 
 // MAIN
+
 // ABOUT SECTION
 .about {
   background-color: $light-white;
   overflow: hidden;
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -223,6 +226,7 @@ body {
   &__title {
     margin-bottom: 1em;
     font-size: 1.8rem;
+    text-align: center;
     text-transform: uppercase;
     color: $secondary-color;
   }
@@ -269,6 +273,129 @@ body {
     filter: blur(0);
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+// OFFERS SECTION
+.offers {
+  position: relative;
+  overflow: hidden;
+  background-image: $light-pink-gradient-solid;
+
+  .section-heading {
+    color: $pure-white;
+  }
+
+  &__card {
+    position: relative;
+    margin: 1em 0;
+    height: 450px;
+    color: $pure-white;
+    text-align: center;
+    perspective: 1000px;
+
+    &:hover {
+      .offers__card-img {
+        transform: rotateY(-180deg);
+        opacity: 0;
+      }
+      .offers__card-info {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+
+    &-img {
+      padding: 2em;
+      height: 100%;
+      border-radius: 8px;
+      background-size: cover;
+      transition: transform 1s, opacity 1s;
+
+      &--first {
+        background-image: $pink-gradient,
+          url(../../dist/img/ksiega_przychodow.jpg);
+      }
+
+      &--second {
+        background-image: $dark-pink-gradient,
+          url(../../dist/img/ksiegowosc.jpg);
+      }
+
+      &--third {
+        background-image: $pink-gradient, url(../../dist/img/podatek_vat.jpg);
+      }
+
+      &--fourth {
+        background-image: $dark-pink-gradient,
+          url(../../dist/img/kadra_place.jpg);
+      }
+
+      &--fifth {
+        background-image: $pink-gradient, url(../../dist/img/ryczalt.jpg);
+      }
+
+      &--sixth {
+        background-image: $dark-pink-gradient, url(../../dist/img/inne.jpg);
+      }
+
+      &-title {
+        font-size: 2.5rem;
+      }
+
+      &-info {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        font-size: 1.8rem;
+
+        i {
+          margin-right: 0.3em;
+        }
+      }
+    }
+
+    &-info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: $dark-pink-gradient-solid;
+      border-radius: 8px;
+      opacity: 0;
+      transform: rotateY(180deg);
+      transition: transform 1s, opacity 1s;
+
+      &-title {
+        position: absolute;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+        top: 1.2em;
+        font-size: 1.6rem;
+      }
+
+      &-list {
+        margin: 0 auto;
+        padding-top: 1.5em;
+        width: 85%;
+        list-style: none;
+
+        &-item {
+          padding: 1em;
+          font-size: 1.2rem;
+          border-bottom: 1px solid $light-white;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -364,10 +491,24 @@ body {
 
     &__title {
       font-size: 2rem;
+      text-align: inherit;
     }
 
     &__text {
       font-size: 1.8rem;
+    }
+  }
+
+  .offers {
+    &__cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      margin: 1em;
+      width: 45%;
     }
   }
 }
@@ -389,7 +530,7 @@ body {
 
   .nav {
     &__item {
-      font-size: 4.8rem;
+      font-size: 3.2rem;
     }
   }
 
@@ -403,6 +544,14 @@ body {
         // justify-content: center;
         margin-bottom: 2.5em;
       }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .offers {
+    &__card {
+      width: 30%;
     }
   }
 }

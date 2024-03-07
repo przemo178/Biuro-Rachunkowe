@@ -1,6 +1,7 @@
 // nawigacja
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger-btn');
+const homeBtn = document.querySelector('.home-btn');
 const allNavItems = document.querySelectorAll('.nav__item');
 
 const handleNav = () => {
@@ -26,6 +27,7 @@ const handleNamItemsAnimation = () => {
 }
 
 navBtn.addEventListener('click', handleNav);
+homeBtn.addEventListener('click', handleNav);
 
 // wjeżdzanie komponentów
 

@@ -21,6 +21,10 @@ body {
   font-size: 1.6rem;
 }
 
+// .black-bars-color .black-bars-color::after,
+// .black-bars-color::before {
+// }
+
 // NAV
 .burger-btn {
   position: fixed;
@@ -596,6 +600,18 @@ body {
       border-bottom-right-radius: 8px;
       box-shadow: 5px 5px 10px #2e2e2e;
     }
+  }
+}
+
+// FOOTER SECTION
+
+.footer {
+  color: $pure-white;
+  background-color: $dark;
+
+  &__text {
+    padding: 1.5em;
+    text-align: center;
   }
 }
 

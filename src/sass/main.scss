@@ -220,7 +220,7 @@ body {
     height: auto;
     border-radius: 8px;
     margin-bottom: 1em;
-    box-shadow: 0 0 15px $secondary-color;
+    box-shadow: 0 0 5px $secondary-color;
   }
 
   &__title {
@@ -311,32 +311,35 @@ body {
       border-radius: 8px;
       background-size: cover;
       transition: transform 1s, opacity 1s;
+      box-shadow: 0 0 5px $secondary-color;
 
       &--first {
-        background-image: $pink-gradient,
+        background-image: $light-pink-gradient,
           url(../../dist/img/ksiega_przychodow.jpg);
       }
 
       &--second {
-        background-image: $dark-pink-gradient,
+        background-image: $light-dark-pink-gradient,
           url(../../dist/img/ksiegowosc.jpg);
       }
 
       &--third {
-        background-image: $pink-gradient, url(../../dist/img/podatek_vat.jpg);
+        background-image: $light-pink-gradient,
+          url(../../dist/img/podatek_vat.jpg);
       }
 
       &--fourth {
-        background-image: $dark-pink-gradient,
+        background-image: $light-dark-pink-gradient,
           url(../../dist/img/kadra_place.jpg);
       }
 
       &--fifth {
-        background-image: $pink-gradient, url(../../dist/img/ryczalt.jpg);
+        background-image: $light-pink-gradient, url(../../dist/img/ryczalt.jpg);
       }
 
       &--sixth {
-        background-image: $dark-pink-gradient, url(../../dist/img/inne.jpg);
+        background-image: $light-dark-pink-gradient,
+          url(../../dist/img/inne.jpg);
       }
 
       &-title {
@@ -369,6 +372,7 @@ body {
       opacity: 0;
       transform: rotateY(180deg);
       transition: transform 1s, opacity 1s;
+      box-shadow: 0 0 5px $secondary-color;
 
       &-title {
         position: absolute;
@@ -395,6 +399,188 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+// HOWWORK SECTION
+
+.howwork {
+  background-color: $light-white;
+  overflow: hidden;
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+    height: 25em;
+    background-image: $dark-pink-gradient-solid;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #2e2e2e;
+
+    &-img {
+      margin-top: 1em;
+      height: 100px;
+      width: 100px;
+    }
+
+    &-info {
+      padding: 2em;
+    }
+
+    &-heading {
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-size: 2rem;
+      color: $pure-white;
+      text-transform: uppercase;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid $pure-white;
+    }
+
+    &-text {
+      margin-bottom: 0.5em;
+      font-size: 1.8rem;
+      text-align: center;
+      color: $pure-white;
+    }
+  }
+}
+
+// CONTACT SECTION
+
+.contact {
+  position: relative;
+  //   display: grid;
+  //   align-items: center;
+  overflow: hidden;
+  background-image: $light-pink-gradient-solid;
+
+  .contact-wrapper {
+    // width: 80%;
+    // height: auto;
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // margin: 0 auto;
+  }
+
+  .contact-in {
+    display: flex;
+    flex-direction: column;
+    // padding: 40px 30px;
+    padding: 2em 1em;
+
+    // &:nth-child(1) {
+    //   flex: 30%;
+    //   background-color: $light-white;
+    // }
+
+    &:nth-child(2) {
+      //   flex: 45%;
+      background-image: $dark-pink-gradient-solid;
+    }
+
+    &:nth-child(3) {
+      //   flex: 25%;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      color: $secondary-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+
+      &--form {
+        font-size: 2rem;
+        text-align: center;
+        color: $pure-white;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1em;
+      }
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2em;
+
+      &-img {
+        width: 30px;
+        height: 30px;
+        margin-right: 1em;
+      }
+
+      &-info {
+        width: 100%;
+        font-size: 1.8rem;
+        // text-align: center;
+        color: $pure-white;
+      }
+    }
+
+    &__form {
+      width: 100%;
+      height: auto;
+
+      &-input {
+        width: 100%;
+        height: 4em;
+        margin-bottom: 2em;
+        border: 1px solid $pure-white;
+        outline: none;
+        padding-left: 5px;
+        background: transparent;
+        color: $pure-white;
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif;
+
+        &::placeholder {
+          color: $pure-white;
+        }
+      }
+
+      &-textarea {
+        width: 100%;
+        height: 10em;
+        margin-bottom: 2em;
+        border: 1px solid $pure-white;
+        outline: none;
+        padding-top: 5px;
+        padding-left: 5px;
+        background: transparent;
+        color: $pure-white;
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif;
+
+        &::placeholder {
+          color: $pure-white;
+        }
+      }
+
+      &-btn {
+        width: 100%;
+        height: 3em;
+        border: 1px solid $pure-white;
+        outline: none;
+        background: transparent;
+        color: $pure-white;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer;
+      }
+    }
+
+    &__iframe {
+      width: 100%;
+      height: 400px;
     }
   }
 }
@@ -433,6 +619,54 @@ body {
   //       //   height: auto;
   //     }
   //   }
+
+  .howwork {
+    &__option {
+      flex-direction: row;
+      height: 15em;
+      margin: 2em 0;
+      width: 100%;
+
+      &-img {
+        margin: 2em;
+        &--right {
+          order: 1;
+        }
+      }
+
+      &-info {
+        padding: 2em;
+      }
+
+      &-heading {
+        text-align: left;
+        font-size: 2.2rem;
+        padding-bottom: 0;
+        border-bottom: none;
+
+        &--right {
+          text-align: right;
+        }
+      }
+
+      &-text {
+        text-align: left;
+        font-size: 1.8rem;
+
+        &--right {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .contact-in {
+      &__title {
+        text-align: left;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -509,6 +743,35 @@ body {
     &__card {
       margin: 1em;
       width: 45%;
+    }
+  }
+
+  .contact {
+    display: grid;
+    align-items: center;
+
+    .contact-wrapper {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .contact-in {
+      flex-direction: row;
+
+      &:nth-child(1) {
+        flex: 30%;
+      }
+
+      &:nth-child(2) {
+        flex: 45%;
+      }
+
+      &:nth-child(3) {
+        flex: 25%;
+        padding: 0;
+      }
     }
   }
 }

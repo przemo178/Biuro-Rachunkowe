@@ -16,19 +16,21 @@
 
 <body>
 
-    <button class="burger-btn">
+    <button class="burger-btn btn-special-animation">
     <div class="burger-btn__box">
         <div class="burger-btn__bars"></div>
     </div>
 </button>
 
-<a href="#home" class="home-btn">Biuro Rachunkowe<br><span class="home-btn__span">Danuta Pakulska</span></a>
+<a href="#home" class="home-btn btn-special-animation">Biuro Rachunkowe<br>
+    <hr><span class="home-btn__span">Danuta Pakulska</span>
+</a>
 
     <nav class="nav">
     <div class="nav__items">
         <a href="#about" class="nav__item">O nas</a>
         <a href="#offers" class="nav__item">Oferta</a>
-        <a href="#howwork" class="nav__item">Jak działamy?</a>
+        <a href="#howwork" class="nav__item">Co nas wyróżnia?</a>
         <a href="#contact" class="nav__item">Kontakt</a>
     </div>
 </nav>
@@ -158,7 +160,7 @@
 
     <!-- SEKCJA Z OFERTAMI -->
 
-    <section id="offers" class="offers section-padding section white-section">
+    <section id="offers" class="offers section-padding section">
         <div class="white-block white-block-left"></div>
         <div class="white-block white-block-right"></div>
         <div class="wrapper">
@@ -235,7 +237,7 @@
                 </div>
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--fourth">
-                        <h3 class="offers__card-img-title">Usługi Kadrowo - Płacowe</h3>
+                        <h3 class="offers__card-img-title">Usługi Kadrowo - <br>- Płacowe</h3>
                         <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
                         <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
                     </div>
@@ -301,7 +303,7 @@
 
     <!-- SEKCJA DLACZEGO MY -->
 
-    <section id="howwork" class="howwork section-padding section">
+    <section id="howwork" class="howwork section-padding section white-section">
 
         <!-- <div class="white-block white-block-right"></div> -->
         <!-- <div class="white-block white-block-left"></div> -->
@@ -311,7 +313,7 @@
 
             <div class="howwork__box">
 
-                <div class="howwork__option">
+                <div class="howwork__option revealFromDown">
                     <img src="./dist/img/doswiadczenie_ikona.svg" alt="doswiadczenie_ikona" class="howwork__option-img">
                     <div class="howwork__option-info">
                         <h3 class="howwork__option-heading">Doświadczenie</h3>
@@ -321,19 +323,20 @@
                     </div>
                 </div>
 
-                <div class="howwork__option">
+                <div class="howwork__option revealFromDown">
                     <img src="./dist/img/uprawnienia_ikona.svg" alt="uprawnienia_ikona"
                         class="howwork__option-img howwork__option-img--right">
                     <div class="howwork__option-info">
                         <h3 class="howwork__option-heading howwork__option-heading--right">Uprawnienia</h3>
                         <p class="howwork__option-text howwork__option-text--right">Mamy uprawnienia do profesjonalnego
                             prowadzenia ksiąg
-                            rachunkowych, co potwierdzają Świadectwa Kwalifikacyjne o numerze 20103/00 wydane przez
+                            rachunkowych, co potwierdzają Świadectwa Kwalifikacyjne o numerze <b>20103/00</b> wydane
+                            przez
                             Ministerstwo Finansów.</p>
                     </div>
                 </div>
 
-                <div class="howwork__option">
+                <div class="howwork__option revealFromDown">
                     <img src="./dist/img/ubezpieczenie_ikona.svg" alt="ubezpieczenie_ikona" class="howwork__option-img">
                     <div class="howwork__option-info">
                         <h3 class="howwork__option-heading">Ubezpieczenie</h3>
@@ -347,7 +350,7 @@
 
     <!-- SEKCJA KONTAKT -->
 
-    <section id="contact" class="contact section-padding section white-section">
+    <section id="contact" class="contact section-padding section">
 
         <div class="white-block white-block-right"></div>
         <!-- <div class="white-block white-block-left"></div> -->
@@ -360,12 +363,14 @@
                 <h3 class="contact-in__title">Telefon</h3>
                 <div class="contact-in__box">
                     <img class="contact-in__box-img" src="./dist/img/phone_icone.svg" alt="telefon_ikona">
-                    <p class="contact-in__box-info">+48 604 407 380<br>+48 87 428 29 55</p>
+                    <!-- <p class="contact-in__box-info">+48 604 407 380<br>+48 87 428 29 55</p> -->
+                    <a class="contact-in__box-info" href="tel:+48604407380">+48 604 407 380<br>+48 87 428 29 55</a>
                 </div>
                 <h3 class="contact-in__title">Email</h3>
                 <div class="contact-in__box">
                     <img class="contact-in__box-img" src="./dist/img/mail_icone.svg" alt="email_ikona">
-                    <p class="contact-in__box-info">danuta.pakulska@firma.pl</p>
+                    <!-- <p class="contact-in__box-info">danuta.pakulska@firma.pl</p> -->
+                    <a class="contact-in__box-info" href="mailto:danuta.pakulska@firma.pl">danuta.pakulska@firma.pl</a>
                 </div>
                 <h3 class="contact-in__title">Adres</h3>
                 <div class="contact-in__box">
@@ -398,7 +403,8 @@
     <footer class="footer">
     <div class="wrapper">
         <p class="footer__text">
-            &copy; <span class="footer__year"></span> Biuro Rachunkowe | Danuta Pakulska
+            &copy; <span class="footer__year"></span> Biuro Rachunkowe | <span class="footer__span">Danuta
+                Pakulska</span>
         </p>
     </div>
 </footer>

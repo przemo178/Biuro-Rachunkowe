@@ -21,25 +21,27 @@ body {
   font-size: 1.6rem;
 }
 
-// .black-bars-color .black-bars-color::after,
-// .black-bars-color::before {
-// }
-
 // NAV
 .burger-btn {
+  width: 66px;
+  height: 66px;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  //   top: 20px;
+  top: 0;
+  //   right: 20px;
+  right: 0;
   padding: 1em;
-  background: none;
+  //   background: none;
+  background: $pure-white;
   border: 1px solid transparent;
   cursor: pointer;
   z-index: 1000;
+  border-bottom-left-radius: 8px;
 
   &:focus {
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
+    // border-radius: 8px;
   }
 
   &:hover {
@@ -47,6 +49,10 @@ body {
     .burger-btn__bars::before {
       width: 100%;
     }
+  }
+
+  &::before {
+    background-color: $light-white;
   }
 
   &__box {
@@ -79,20 +85,38 @@ body {
 
 .home-btn {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
   padding: 1em;
-  background: none;
+  background: $pure-white;
+  //   background-image: $dark-pink-gradient;
   border: 1px solid transparent;
+  border: none;
   cursor: pointer;
   z-index: 1000;
+  //   font-weight: 700;
+  color: $dark;
+  font-size: 1.4rem;
+  text-align: center;
   text-decoration: none;
-  color: $pure-white;
+  border-bottom-right-radius: 8px;
+  //   text-transform: uppercase;
 
   &__span {
     font-weight: 700;
-    color: $dark;
+    // color: purple;
+    color: $pure-red;
     text-transform: uppercase;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    // border-radius: 8px;
+  }
+
+  &::before {
+    background-color: $light-white;
   }
 }
 
@@ -155,6 +179,12 @@ body {
   animation: navItemsAnimation 1s both;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: $dark;
+}
+
 // HEADER
 .header {
   position: relative;
@@ -171,19 +201,21 @@ body {
   overflow: hidden;
 
   &__heading {
-    // font-family: "Dancing Script", cursive;
     padding: 0.2em 0;
     font-family: "Montserrat", cursive;
     font-size: 3.8rem;
     font-weight: 700;
+    border-bottom: 2px solid $pure-white;
   }
 
   &__text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding: 0.3em 0;
-    color: $dark;
+    // color: $dark;
+    color: $pure-black;
     font-weight: 400;
-    text-shadow: 0 0 1px $dark;
+    // text-shadow: 0 0 1px $dark;
+    text-shadow: 0 0 1px $pure-black;
   }
 
   &__btn {
@@ -238,45 +270,6 @@ body {
   &__text {
     padding-bottom: 1em;
     line-height: 1.5em;
-  }
-
-  .revealFromLeft {
-    opacity: 0;
-    filter: blur(10%);
-    transform: translateX(-100vw);
-    transition: all 1s ease;
-  }
-
-  .revealFromRight {
-    opacity: 0;
-    filter: blur(10%);
-    transform: translateX(100vw);
-    transition: all 1s ease;
-  }
-
-  .revealFromDown {
-    filter: blur(10%);
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-  }
-
-  .revealFromLeft.showFromLeft {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-
-  .revealFromRight.showFromRight {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
-
-  .revealFromDown.showFromDown {
-    filter: blur(0);
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -495,7 +488,8 @@ body {
     &__title {
       font-size: 2rem;
       text-align: center;
-      color: $pure-white;
+      //   color: $pure-white;
+      color: $pure-black;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 0.5em;
@@ -515,18 +509,20 @@ body {
       align-items: center;
       width: 100%;
       margin-bottom: 2em;
+      background-color: $dark;
+      border-radius: 8px;
 
       &-img {
         width: 30px;
         height: 30px;
-        margin-right: 1em;
+        margin: 0 0.5em;
       }
 
       &-info {
-        padding: 10px;
-        background-color: $secondary-color-hover;
+        padding: 0.7em 0;
         font-size: 1.8rem;
         border-radius: 8px;
+        color: $dark;
         color: $pure-white;
         text-decoration: none;
       }
@@ -613,6 +609,49 @@ body {
     padding: 1.5em;
     text-align: center;
   }
+
+  &__span {
+    color: $pure-red;
+  }
+}
+
+.revealFromLeft {
+  opacity: 0;
+  filter: blur(10%);
+  transform: translateX(-100vw);
+  transition: all 1s ease;
+}
+
+.revealFromRight {
+  opacity: 0;
+  filter: blur(10%);
+  transform: translateX(100vw);
+  transition: all 1s ease;
+}
+
+.revealFromDown {
+  filter: blur(10%);
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.revealFromLeft.showFromLeft {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.revealFromRight.showFromRight {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.revealFromDown.showFromDown {
+  filter: blur(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 
 // =================================
@@ -771,17 +810,23 @@ body {
 
 @media (min-width: 992px) {
   .burger-btn {
-    top: 50px;
-    right: 50px;
+    // top: 50px;
+    right: 150px;
+    border-bottom-right-radius: 8px;
   }
 
   .home-btn {
-    top: 50px;
-    left: 50px;
+    // top: 50px;
+    left: 150px;
+    border-bottom-left-radius: 8px;
   }
 
   .header {
     background-image: $light-pink-gradient, url("../img/header_3.jpg");
+
+    &__text {
+      font-size: 2.4rem;
+    }
   }
 
   .nav {
@@ -811,7 +856,7 @@ body {
   }
 }
 
-@media (min-width: 1130px) {
+@media (min-width: 1197px) {
   .contact {
     .contact-in {
       &:nth-child(1) {

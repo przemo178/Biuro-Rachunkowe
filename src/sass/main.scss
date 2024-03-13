@@ -344,14 +344,19 @@ body {
       }
 
       &-info {
+        display: flex;
         position: absolute;
         bottom: 30px;
         right: 30px;
         font-size: 1.8rem;
 
-        i {
+        img {
           margin-right: 0.3em;
         }
+
+        // i {
+        //   margin-right: 0.3em;
+        // }
       }
     }
 
@@ -473,22 +478,23 @@ body {
       background-size: cover;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      box-shadow: 5px 5px 10px #2e2e2e;
+      box-shadow: 5px 5px 10px $dark;
     }
 
     &:nth-child(2) {
+      position: relative;
       background-image: $dark-pink-gradient-solid;
-      box-shadow: 5px 5px 10px #2e2e2e;
+      box-shadow: 5px 5px 10px $dark;
     }
 
     &:nth-child(3) {
       padding: 0;
+      z-index: 10;
     }
 
     &__title {
       font-size: 2rem;
       text-align: center;
-      //   color: $pure-white;
       color: $pure-black;
       text-transform: uppercase;
       font-weight: 700;
@@ -587,6 +593,31 @@ body {
           background-color: $secondary-color-hover;
         }
       }
+    }
+
+    .msg-status {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      padding: 30px;
+      width: 300px;
+      border-radius: 8px;
+      font-size: 2rem;
+      color: $pure-white;
+      transform: translateX(-50%);
+    }
+
+    .success {
+      display: flex;
+      background-color: hsl(143, 83%, 55%);
+    }
+
+    .error {
+      display: flex;
+      background-color: hsl(9, 100%, 64%);
     }
 
     &__iframe {
@@ -856,7 +887,7 @@ body {
   }
 }
 
-@media (min-width: 1197px) {
+@media (min-width: 1130px) {
   .contact {
     .contact-in {
       &:nth-child(1) {
@@ -877,3 +908,25 @@ body {
     }
   }
 }
+
+// @media (min-width: 1197px) {
+//   .contact {
+//     .contact-in {
+//       &:nth-child(1) {
+//         border-top-left-radius: 8px;
+//         border-bottom-left-radius: 8px;
+//       }
+
+//       &:nth-child(2) {
+//         border-top-right-radius: 0;
+//       }
+
+//       &__iframe {
+//         height: 100%;
+//         border-top-right-radius: 8px;
+//         border-bottom-right-radius: 8px;
+//         border-bottom-left-radius: 0;
+//       }
+//     }
+//   }
+// }

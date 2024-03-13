@@ -122,7 +122,12 @@
                     <div class="offers__card-img offers__card-img--first">
                         <h3 class="offers__card-img-title">Obsługa<br>księgi przychodów<br>i rozchodów</h3>
                         <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <!-- <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p> -->
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
+
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Obsługa księgi przychodów i rozchodów</h3>
@@ -140,8 +145,10 @@
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--second">
                         <h3 class="offers__card-img-title">Obsługa ksiąg rachunkowych (Pełna księgowość)</h3>
-                        <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Obsługa ksiąg rachunkowych (Pełna księgowość)</h3>
@@ -167,8 +174,10 @@
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--third">
                         <h3 class="offers__card-img-title">Obsługa ewidencji na potrzeby podatku VAT</h3>
-                        <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Obsługa ewidencji na potrzeby podatku VAT</h3>
@@ -188,8 +197,10 @@
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--fourth">
                         <h3 class="offers__card-img-title">Usługi Kadrowo - <br>- Płacowe</h3>
-                        <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Usługi Kadrowo - Płacowe</h3>
@@ -217,8 +228,10 @@
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--fifth">
                         <h3 class="offers__card-img-title">Obsługa Ewidencji Ryczałtowych</h3>
-                        <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Obsługa Ewidencji Ryczałtowych</h3>
@@ -233,8 +246,10 @@
                 <div class="offers__card" onclick="void(0)">
                     <div class="offers__card-img offers__card-img--sixth">
                         <h3 class="offers__card-img-title">Inne</h3>
-                        <!-- ZAMIENIĆ IKONĘ NA DARMOWĄ -->
-                        <p class="offers__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                        <div class="offers__card-img-info">
+                            <img src="./dist/img/strzalka_ikona.svg" alt="">
+                            <p>Więcej informacji</p>
+                        </div>
                     </div>
                     <div class="offers__card-info">
                         <h3 class="offers__card-info-title">Inne</h3>
@@ -331,14 +346,19 @@
 
             <div class="contact-in">
                 <h3 class="contact-in__title--form">Napisz wiadomość</h3>
-                <form class="contact-in__form">
-                    <input type="text" placeholder="Imię i Nazwisko" class="contact-in__form-input">
-                    <input type="text" placeholder="Email" class="contact-in__form-input">
-                    <input type="text" placeholder="Temat" class="contact-in__form-input">
-                    <textarea placeholder="Treść" class="contact-in__form-textarea"></textarea>
+                <form action="mail.php" method="post" class="contact-in__form">
+                    <input type="text" id="name" name="name" placeholder="Imię i Nazwisko"
+                        class="contact-in__form-input contact-in__form-inputError" required>
+                    <input type="email" id="email" name="email" placeholder="Email" class="contact-in__form-input"
+                        required>
+                    <input type="text" id="subject" name="subject" placeholder="Temat" class="contact-in__form-input"
+                        required>
+                    <textarea id="msg" name="msg" placeholder="Treść" class="contact-in__form-textarea"
+                        required></textarea>
                     <button type="submit" class="contact-in__form-btn btn-special-animation">Wyślij</button>
                     <!-- <input type="submit" value="WYŚLIJ" class="contact-in__form-btn btn-special-animation"> -->
                 </form>
+                <p class="msg-status"></p>
             </div>
             <div class="contact-in">
                 <iframe class="contact-in__iframe"

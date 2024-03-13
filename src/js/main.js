@@ -10,8 +10,6 @@ const footerYear = document.querySelector('.footer__year');
 const handleNav = () => {
     nav.classList.toggle('nav--active')
 
-    // navBtnBars.classList.remove('black-bars-color');
-
     allNavItems.forEach(item => {
         item.addEventListener('click', () => {
             nav.classList.remove('nav--active')
@@ -35,20 +33,19 @@ const handleNamItemsAnimation = () => {
     })
 }
 
-const handleObserver = () => {
-    const currentSection = window.scrollY;
+// const handleObserver = () => {
+//     const currentSection = window.scrollY;
 
-    allSections.forEach(section => {
+//     allSections.forEach(section => {
 
-        if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
-            navBtnBars.classList.add('black-bars-color')
-        } else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
-            navBtnBars.classList.remove('black-bars-color')
-        }
-    })
-}
+//         if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+//             navBtnBars.classList.add('black-bars-color')
+//         } else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+//             navBtnBars.classList.remove('black-bars-color')
+//         }
+//     })
+// }
 
-// data w stopce
 
 const handleCurrentYear = () => {
     const year = (new Date).getFullYear();
@@ -61,10 +58,6 @@ homeBtn.addEventListener('click', removeNav);
 // window.addEventListener('scroll', handleObserver);
 
 // wjeżdzanie komponentów
-
-window.addEventListener('scroll', revealFromLeft);
-window.addEventListener('scroll', revealFromRight);
-window.addEventListener('scroll', revealFromDown);
 
 function revealFromLeft() {
     const revealsLeft = document.querySelectorAll('.revealFromLeft');
@@ -118,4 +111,29 @@ function revealFromDown() {
             revealsDown[i].classList.remove('showFromDown');
         }
     }
+}
+
+window.addEventListener('scroll', revealFromLeft);
+window.addEventListener('scroll', revealFromRight);
+window.addEventListener('scroll', revealFromDown);
+
+// mail
+const msgStatus = document.querySelector('.msg-status');
+
+if (document.location.search === '?mail_status=sent') {
+    msgStatus.classList.add('success')
+    msgStatus.textContent = 'Wiadomość wysłana!'
+
+    setTimeout(() => {
+        msgStatus.classList.remove('success')
+    }, 3000);
+}
+
+if (document.location.search === '?mail_status=error') {
+    msgStatus.classList.add('error')
+    msgStatus.textContent = 'Wystąpił błąd.'
+
+    setTimeout(() => {
+        msgStatus.classList.remove('error')
+    }, 3000);
 }

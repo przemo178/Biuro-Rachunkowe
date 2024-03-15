@@ -64,6 +64,26 @@
   padding: 6em 2em;
 }
 
+.section-cookies {
+  padding: 2em;
+  background-image: $light-pink-gradient-solid;
+}
+
+.heading-cookies {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $pure-white;
+}
+
+@media (min-width: 640px) {
+  .section-cookies {
+    height: 100vh;
+  }
+}
+
 @media (min-width: 768px) {
   .section-heading {
     font-size: 3.6rem;

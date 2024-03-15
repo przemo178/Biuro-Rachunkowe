@@ -16,7 +16,6 @@ html {
 }
 
 body {
-  //   font-family: "Open Sans", sans-serif;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
@@ -26,12 +25,9 @@ body {
   width: 66px;
   height: 66px;
   position: fixed;
-  //   top: 20px;
   top: 0;
-  //   right: 20px;
   right: 0;
   padding: 1em;
-  //   background: none;
   background: $pure-white;
   border: 1px solid transparent;
   cursor: pointer;
@@ -41,7 +37,6 @@ body {
   &:focus {
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    // border-radius: 8px;
   }
 
   &:hover {
@@ -728,6 +723,15 @@ body {
         background-color: $light-white;
       }
     }
+  }
+}
+
+.cookies-paragraph {
+  margin-bottom: 1em;
+  color: $pure-white;
+
+  &:nth-child(5) {
+    margin-bottom: 2em;
   }
 }
 

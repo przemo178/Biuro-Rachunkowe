@@ -6,6 +6,8 @@ $dark: #2e2e2e;
 $pure-black: #000;
 $pure-red: tomato;
 $secondary-color-hover: rgba(38, 22, 84, 0.2);
+$green-popup: hsl(143, 83%, 55%);
+$red-popup: hsl(9, 100%, 64%);
 
 $purple-gradient: linear-gradient(
   45deg,
@@ -41,16 +43,4 @@ $dark-pink-gradient-solid: linear-gradient(
   45deg,
   rgb(145, 51, 127),
   rgb(40, 24, 86)
-);
-$pink-secondary-gradient-solid: linear-gradient(
-  -20deg,
-  #ddd6f3 0%,
-  #faaca8 100%,
-  #faaca8 100%
-);
-$pink-third-gradient-solid: linear-gradient(
-  -225deg,
-  #ff057c 0%,
-  #8d0b93 50%,
-  #321575 100%
 );

@@ -84,22 +84,18 @@ body {
   left: 0;
   padding: 1em;
   background: $pure-white;
-  //   background-image: $dark-pink-gradient;
   border: 1px solid transparent;
   border: none;
   cursor: pointer;
   z-index: 1000;
-  //   font-weight: 700;
   color: $dark;
   font-size: 1.4rem;
   text-align: center;
   text-decoration: none;
   border-bottom-right-radius: 8px;
-  //   text-transform: uppercase;
 
   &__span {
     font-weight: 700;
-    // color: purple;
     color: $pure-red;
     text-transform: uppercase;
   }
@@ -107,7 +103,6 @@ body {
   &:focus {
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    // border-radius: 8px;
   }
 
   &::before {
@@ -140,7 +135,6 @@ body {
     font-size: 2.8rem;
     color: $pure-white;
     text-decoration: none;
-    // text-transform: uppercase;
 
     &::before {
       position: absolute;
@@ -206,10 +200,8 @@ body {
   &__text {
     font-size: 1.8rem;
     padding: 0.3em 0;
-    // color: $dark;
     color: $pure-black;
     font-weight: 400;
-    // text-shadow: 0 0 1px $dark;
     text-shadow: 0 0 1px $pure-black;
   }
 
@@ -348,10 +340,6 @@ body {
         img {
           margin-right: 0.3em;
         }
-
-        // i {
-        //   margin-right: 0.3em;
-        // }
       }
     }
 
@@ -554,6 +542,7 @@ body {
       &-textarea {
         width: 100%;
         height: 10em;
+        resize: vertical;
         margin-bottom: 2em;
         border: 1px solid $pure-white;
         border-radius: 8px;
@@ -607,12 +596,12 @@ body {
 
     .success {
       display: flex;
-      background-color: hsl(143, 83%, 55%);
+      background-color: $green-popup;
     }
 
     .error {
       display: flex;
-      background-color: hsl(9, 100%, 64%);
+      background-color: $red-popup;
     }
 
     &__iframe {
@@ -640,6 +629,8 @@ body {
     color: $pure-red;
   }
 }
+
+// STYLES OF REVEALS
 
 .revealFromLeft {
   opacity: 0;
@@ -681,6 +672,7 @@ body {
 }
 
 // COOKIES
+
 .cookies {
   width: 100%;
   position: fixed;
@@ -891,13 +883,11 @@ body {
 
 @media (min-width: 992px) {
   .burger-btn {
-    // top: 50px;
     right: 150px;
     border-bottom-right-radius: 8px;
   }
 
   .home-btn {
-    // top: 50px;
     left: 150px;
     border-bottom-left-radius: 8px;
   }

@@ -2,6 +2,12 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .white-block {
@@ -64,7 +70,7 @@
 }
 
 .section-cookies {
-  padding: 2em;
+  padding: 6em 2em;
   background-image: $light-pink-gradient-solid;
 }
 
@@ -84,6 +90,14 @@
 }
 
 @media (min-width: 768px) {
+  .wrapper {
+    &__footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
   .section-heading {
     font-size: 3.6rem;
   }

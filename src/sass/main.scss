@@ -515,6 +515,10 @@ body {
         color: $pure-white;
         text-decoration: none;
       }
+
+      &-mail {
+        font-size: 1.4rem;
+      }
     }
 
     &__form {
@@ -726,6 +730,26 @@ body {
   }
 }
 
+.privacy-box {
+  margin-bottom: 1em;
+  color: $pure-white;
+
+  &__title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5em;
+  }
+
+  &__info {
+    &--item {
+      line-height: 1.5em;
+    }
+
+    &--item2 {
+      margin-left: 2em;
+    }
+  }
+}
+
 // =================================
 // MEDIA
 // =================================
@@ -775,6 +799,12 @@ body {
     .contact-in {
       &__title {
         text-align: left;
+      }
+
+      &__box {
+        &-mail {
+          font-size: 1.8rem;
+        }
       }
     }
   }
